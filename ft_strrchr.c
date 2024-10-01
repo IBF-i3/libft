@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:28:56 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/09/27 14:45:46 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/01 03:27:56 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	len = ft_strlen(s);
-	while (s[len] >= 0)
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[len]);
+	while (len >= 0)
 	{
 		if (s[len] == (unsigned char)c)
-			return (s);
+			return ((char *)&s[len]);
 		len--;
 	}
 	return (NULL);
