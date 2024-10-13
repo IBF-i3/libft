@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ibenaven <ibenaven@student.42madrid.c      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/10/13 17:15:56 by ibenaven          #+#    #+#              #
+#    Updated: 2024/10/13 17:17:28 by ibenaven         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 OUTPUT = libft.a
 
 C_FILES = ft_isalpha.c \
@@ -18,8 +30,8 @@ C_FILES = ft_isalpha.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
 	ft_memchr.c \
-	ft_memcmp.c # \
-	#ft_strnstr.c \
+	ft_memcmp.c \
+	ft_strnstr.c#\
 	#ft_atoi.c \
 	#ft_calloc.c \
 	#ft_strdup.c 
@@ -52,4 +64,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean r
+.PHONY: all clean fclean re
