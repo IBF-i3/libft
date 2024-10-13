@@ -28,3 +28,19 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+/*
+int main() {
+    char dest[14];
+    const char *source = "Hello, world!";
+    
+    size_t result1 = ft_strlcpy(dest, source, sizeof(dest));
+    printf("Copied string: '%s'\n", dest);
+    printf("Length of source: %zu\n\n", result1);
+
+    char dest2[14];
+    size_t result2 = ft_strlcpy(dest2, source, 0);
+    printf("Copied string (size 0): '%s'\n", dest2);
+    printf("Length of source (size 0): %zu\n", result2);
+
+    return 0;
+}*/
