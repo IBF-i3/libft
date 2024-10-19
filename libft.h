@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 01:13:24 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/01 07:34:39 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/19 20:44:48 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int			ft_atoi(const char *nptr);
 char		*ft_strdup(const char *s);
 
 // Part 2
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);

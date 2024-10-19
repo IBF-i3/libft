@@ -6,7 +6,7 @@
 #    By: ibenaven <ibenaven@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 17:15:56 by ibenaven          #+#    #+#              #
-#    Updated: 2024/10/13 17:17:28 by ibenaven         ###   ########.fr        #
+#    Updated: 2024/10/19 20:42:58 by ibenaven         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,12 +35,13 @@ C_FILES = ft_isalpha.c \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_strdup.c \
+	ft_substr.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
-	ft_putendl_fd.c
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c
 
 INC_FILE = libft.h
-
 
 O_FILES = $(C_FILES:.c=.o)
 
@@ -51,7 +52,6 @@ AR = ar
 ARFLAGS = -r -c -s
 
 all: $(NAME)
-
 
 $(NAME):$(O_FILES)
 	$(AR) $(ARFLAGS) $(NAME) $(O_FILES)
