@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-OUTPUT = libft.a
+NAME	= libft.a
 
 C_FILES = ft_isalpha.c \
 	ft_isdigit.c \
@@ -31,10 +31,13 @@ C_FILES = ft_isalpha.c \
 	ft_strncmp.c \
 	ft_memchr.c \
 	ft_memcmp.c \
-	ft_strnstr.c#\
-	#ft_atoi.c \
-	#ft_calloc.c \
-	#ft_strdup.c 
+	ft_calloc.c \
+	ft_strnstr.c \
+	ft_atoi.c \
+	ft_strdup.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c
 
 INC_FILE = libft.h
 
@@ -47,11 +50,11 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = -r -c -s
 
-all: $(OUTPUT)
+all: $(NAME)
 
 
-$(OUTPUT):$(O_FILES)
-	$(AR) $(ARFLAGS) $(OUTPUT) $(O_FILES)
+$(NAME):$(O_FILES)
+	$(AR) $(ARFLAGS) $(NAME) $(O_FILES)
 
 %.o: %.c $(INC_FILE)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -60,7 +63,7 @@ clean:
 	rm -rf $(O_FILES)
 
 fclean: clean
-	rm -f $(OUTPUT)
+	rm -f $(NAME)
 
 re: fclean all
 
