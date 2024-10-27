@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,53 +12,35 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	long	nbr;
+	size_t	s_len;
+	size_t	i;
 
-	nbr = n;
-	if (nbr < 0)
+	s_len = ft_strlen(s);
+	i = 0;
+	while (i < s_len)
 	{
-		ft_putchar_fd('-', fd);
-		nbr = -nbr;
+		f(i, &s[i]);
+		i++;
 	}
-	if (nbr > 9)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putnbr_fd(nbr % 10, fd);
-	}
-	else
-		ft_putchar_fd(nbr + '0', fd);
 }
 /*
+void	print_str(unsigned int j, char *s2)
+{
+	ft_putnbr_fd(j, 1);
+	ft_putstr_fd(" = ", 1);
+	ft_putendl_fd(s2, 1);
+}
+
 int	main()
 {
-	int	n1;
-	int	n2;
-	int	n3;
-	int	n4;
-	int	n5;
-
-	n1 = 2147483647;
-	n2 = -2147483648;
-	n3 = -2147483649;
-	n4 = 2147483648;
-	n5 = 0;
-	ft_putstr_fd("Int max: ", 1);
-	ft_putnbr_fd(n1, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Int min: ", 1);
-	ft_putnbr_fd(n2, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Int min underflow: ", 1);
-	ft_putnbr_fd(n3, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Int max overflow: ", 1);
-	ft_putnbr_fd(n4, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Zero: ", 1);
-	ft_putnbr_fd(n5, 1);
-	ft_putendl_fd("", 1);
+	char	*str;
+	
+	str = malloc(5 * sizeof(char));
+	if (str == NULL)
+		return (1);
+	str = "abcde";
+	ft_striteri(str, print_str);
 	return (0);
-
 }*/

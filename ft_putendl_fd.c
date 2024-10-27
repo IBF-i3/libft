@@ -17,3 +17,17 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+/*
+int	main()
+{
+	char	*str1;
+	char	*str2;
+	int	fd;
+
+	str1 = "Hello my friend!";
+	str2 = "How are you?";
+	fd = 1;
+	ft_putendl_fd(str1, fd);
+	ft_putendl_fd(str2, fd);
+	return (0);
+}*/

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,53 +12,39 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	long	nbr;
+	size_t	s1_len;
+	size_t	i;
 
-	nbr = n;
-	if (nbr < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nbr = -nbr;
-	}
-	if (nbr > 9)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putnbr_fd(nbr % 10, fd);
-	}
-	else
-		ft_putchar_fd(nbr + '0', fd);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
+		i++;
+	s1_len = ft_strlen(s1);
+	while (i < s1_len && ft_strrchr(set, s1[s1_len - 1]))
+		s1_len--;
+	return (ft_substr(s1, i, s1_len - i));
 }
 /*
 int	main()
 {
-	int	n1;
-	int	n2;
-	int	n3;
-	int	n4;
-	int	n5;
+	char	*str;
+	char	*trim;
+	char	*str_trimmed;
 
-	n1 = 2147483647;
-	n2 = -2147483648;
-	n3 = -2147483649;
-	n4 = 2147483648;
-	n5 = 0;
-	ft_putstr_fd("Int max: ", 1);
-	ft_putnbr_fd(n1, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Int min: ", 1);
-	ft_putnbr_fd(n2, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Int min underflow: ", 1);
-	ft_putnbr_fd(n3, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Int max overflow: ", 1);
-	ft_putnbr_fd(n4, 1);
-	ft_putendl_fd("", 1);
-	ft_putstr_fd("Zero: ", 1);
-	ft_putnbr_fd(n5, 1);
-	ft_putendl_fd("", 1);
+	str = "Hello my friend!";
+	trim = "my friend!";
+	str_trimmed = ft_strtrim(str, trim);
+	if (str_trimmed == NULL)
+	{
+		printf("Error: function returned NULL\n");
+		return (1);
+	}
+	printf("Original string: %s\n", str);
+	printf("Set to trim: %s\n", trim);
+	printf("Trimmed string: %s\n", str_trimmed);
+	free(str_trimmed);
 	return (0);
-
 }*/

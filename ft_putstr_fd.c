@@ -23,3 +23,17 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/*
+int	main()
+{
+	char	*str1;
+	//char	*str2;
+	int	fd;
+
+	str1 = "Hello my friend!";
+	//str2 = "How are you?";
+	fd = 1;
+	ft_putstr_fd(str1, fd);
+	//ft_putstr_fd(str2, fd);
+	return (0);
+}*/
