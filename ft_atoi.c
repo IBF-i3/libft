@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 02:55:47 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/13 19:56:26 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:31:03 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int	ft_atoi(const char *nptr)
 {
 	size_t	i;
 	int		sign;
-	int		res;
+	int		result;
 
 	i = 0;
 	sign = 1;
-	res = 0;
+	result = 0;
 	while ((nptr[i] != '\0') && ((nptr[i] == '\t') || (nptr[i] == '\n')
 			|| (nptr[i] == '\v') || (nptr[i] == '\f')
 			|| (nptr[i] == '\r') || (nptr[i] == ' ')))
@@ -33,8 +33,8 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(nptr[i]))
 	{
-		res = (res * 10) + (nptr[i] - '0');
+		result = (result * 10) + (nptr[i] - '0');
 		i++;
 	}
-	return (res * sign);
+	return (result * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 02:02:22 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/09/27 02:05:40 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:34:41 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	if (ft_isprint(2) == 0)
-		write(1, "no", 2);
-	else
-		write(1, "yes", 3);
-}*/

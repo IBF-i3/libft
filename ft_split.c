@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 18:06:04 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/19 18:06:23 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:38:58 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,29 +79,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array);
 }
-/*
-int	main()
-{
-	char	*str;
-	char	c;
-	char	**array;
-	size_t	i;
-
-	str = "hellocmycfriend";
-	c = 'c';
-	array = ft_split(str,c);
-	if (array == NULL)
-		return (1);
-	printf("Original string: %s\n", str);
-	printf("Separator: %c\n", c);
-	i = 0;
-	while (array[i] != NULL)
-	{
-		printf("Word %zu: %s\n", i + 1, array[i]);
-		i++; 
-	}
-	while (i--)
-		free(array[i]);
-	free (array);
-	return (0);
-}*/

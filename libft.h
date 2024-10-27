@@ -6,19 +6,17 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 01:13:24 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/19 20:44:48 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:32:07 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h> // BORRAR!!
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
 
-// Part 1
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
@@ -42,8 +40,6 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_atoi(const char *nptr);
 char		*ft_strdup(const char *s);
-
-// Part 2
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);

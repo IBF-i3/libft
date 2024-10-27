@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 01:12:13 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/09/27 02:01:52 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:34:03 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	if(ft_isascii('e') == 0)
-		write(1, "no", 2);
-	else
-		write(1, "yes", 3);
-	return (0);
-}*/

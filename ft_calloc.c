@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.c>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 19:56:49 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/13 20:33:46 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:32:54 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
-/*
-int	main()
-{
-	
-}*/

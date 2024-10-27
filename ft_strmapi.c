@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 19:24:25 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/19 20:48:19 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:43:38 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
-/*
-char	transform(unsigned int i, char c)
-{
-	return (c + i);
-}
-
-int	main()
-{
-	char const	s[6] = "hello\0";
-	char	*result;
-
-	result = ft_strmapi(s, transform);
-	if (result == NULL)
-	{
-		printf("Error: function returned NULL\n");
-		return (1);
-	}
-	if (result)
-	{
-        	printf("Original string: %s\n", s);
-        	printf("Transformed string: %s\n", result);
-        	free(result);
-	}
-	return (0);
-}*/

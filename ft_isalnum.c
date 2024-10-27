@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 01:56:19 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/09/27 02:01:06 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:33:13 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	if (ft_isalnum('&') == 0)
-		write(1, "no", 2);
-	else
-		write(1, "yes", 3);
-	return (0);
-}*/

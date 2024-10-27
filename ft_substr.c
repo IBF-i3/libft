@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 19:24:25 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/19 20:48:19 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:45:11 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (substr);
 }
-/*
-int	main()
-{
-	char	*str;
-	char	*substr;
-	int	start;
-	size_t	len;
-
-	str = "Hellomyfriend";
-	start = 5;
-	len = *str - start;
-	substr = ft_substr(str, start, len);
-	if (substr == NULL)
-	{
-		printf("Error: function returned NULL\n");
-		return (1);
-	}
-	printf("String: %s\n", str);
-	printf("Substring: %s\n", substr);
-	free(substr);
-	return (0);
-}*/

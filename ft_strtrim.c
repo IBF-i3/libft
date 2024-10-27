@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 17:32:43 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/19 20:05:10 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:14:18 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, i, s1_len - i));
 }
 /*
-int	main()
+int	main(void)
 {
 	char	*str;
 	char	*trim;

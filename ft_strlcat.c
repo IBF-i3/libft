@@ -6,7 +6,7 @@
 /*   By: ibenaven <ibenaven@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 07:36:45 by ibenaven          #+#    #+#             */
-/*   Updated: 2024/10/13 17:10:07 by ibenaven         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:40:47 by ibenaven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (dst_len + src_len);
 }
-/*
-int	main()
-{
-    char dest[20] = "Hello, ";
-    const char *source = "world!";
-
-    size_t result = ft_strlcat(dest, source, sizeof(dest));
-
-    printf("Final string: '%s'\n", dest);
-
-    return (0);
-}*/
