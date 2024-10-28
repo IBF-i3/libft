@@ -6,7 +6,7 @@
 #    By: ibenaven <ibenaven@student.42madrid.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 17:15:56 by ibenaven          #+#    #+#              #
-#    Updated: 2024/10/27 16:49:32 by ibenaven         ###   ########.fr        #
+#    Updated: 2024/10/28 00:22:46 by ibenaven         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,11 +45,16 @@ C_FILES = ft_isalpha.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
+
+BONUS_FILES = ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \ 	
 
 INC_FILE = libft.h
 
 O_FILES = $(C_FILES:.c=.o)
+
+O_BONUS = $(BONUS_FILES:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -67,10 +72,14 @@ $(NAME):$(O_FILES)
 
 clean:
 	rm -rf $(O_FILES)
+	rm -rf $(O_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus:
+	@make $(NAMES) $(O_BONUS)
 
 .PHONY: all clean fclean re
