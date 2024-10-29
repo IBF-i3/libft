@@ -45,10 +45,10 @@ C_FILES = ft_isalpha.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
+	ft_putnbr_fd.c
 
 BONUS_FILES = ft_lstnew_bonus.c \
-	ft_lstadd_front_bonus.c \ 	
+	ft_lstadd_front_bonus.c 	
 
 INC_FILE = libft.h
 
@@ -79,7 +79,8 @@ fclean: clean
 
 re: fclean all
 
-bonus:
-	@make $(NAMES) $(O_BONUS)
+bonus: $(O_BONUS)
+	$(AR) $(ARFLAGS) $(NAME) $(O_BONUS)
+	@make $(NAME) $(O_BONUS)
 
 .PHONY: all clean fclean re
